@@ -135,120 +135,54 @@ license:       creative commons CC-BY-NC-SA
    </view>
 
    <view name="gamelist">
-      <image name="gamelist-top-border">
-         <origin>0 0</origin>
-         <pos>0 0.081481481481481</pos>
-         <size>1 0.000925925925926</size>
-         <path>${spacerImage}</path>
-         <tile>true</tile>
-         <zIndex>0</zIndex>
-         <color>343434</color>
-         <zIndex>2</zIndex>
-      </image>
-      <image name="gamelist-nav-background">
-         <origin>0 0</origin>
-         <pos>0 0</pos>
-         <path>./_inc/images/gamelist-nav-background.svg</path>
-         <zIndex>1</zIndex>
-      </image>
-      <text name="gamelist-nav-title">
-         <origin>0 0</origin>
-         <fontPath>${fontRegular}</fontPath>
-         <fontSize>0.034</fontSize>
-         <text>Select Game</text>
-         <color>F8F8F8</color>
-      </text>
-      <textlist name="gamelist-nav">
-         <pos>0 0.083333333333333</pos><!-- 0 90 -->
-         <fontPath>${fontRegular}</fontPath>
-         <fontSize>0.02962962962963</fontSize>
-         <lineSpacing>1.71875</lineSpacing>
-         <horizontalMargin>0.02864</horizontalMargin>
-         <selectorHeight>0.050925925925926</selectorHeight>
-         <selectorColor>1c1c1c</selectorColor>
-         <selectedColor>F8F8F8</selectedColor>
-         <primaryColor>585858</primaryColor>
-         <secondaryColor>888888</secondaryColor>
-      </textlist>
-      <image name="gamelist-nav-border">
-         <origin>0 0</origin>
-         <size>0 1</size>
-         <path>${spacerImage}</path>
-         <tile>true</tile>
-         <zIndex>0</zIndex>
-         <color>343434</color>
-         <zIndex>2</zIndex>
-      </image>
-      <image name="gamelist-nav-emblem">
-         <origin>1 0</origin>
-         <pos>1 0</pos>
-         <path>./_inc/images/gamelist-nav-emblem.svg</path>
-         <zIndex>1</zIndex>
-      </image>
-      <text name="system-title">
-         <origin>0 0</origin>
-         <fontPath>${fontLogo}</fontPath>
-         <fontSize>0.036</fontSize>
-         <letterCase>uppercase</letterCase>
-         <color>ffffff</color>
-      </text>
-      <text name="custom-collection-name">
-         <fontPath>${fontLogo}</fontPath>
-      </text>
-      <badges name="badges">
-         <origin>0 0</origin>
-         <lines>1</lines>
-         <itemsPerLine>9</itemsPerLine>
-         <horizontalAlignment>right</horizontalAlignment>
-         <slots>all</slots>
-         <customBadgeIcon badge="folder">./_inc/images/badge-folder.svg</customBadgeIcon>
-         <customBadgeIcon badge="broken">./_inc/images/badge-broken.svg</customBadgeIcon>
-         <customBadgeIcon badge="completed">./_inc/images/badge-completed.svg</customBadgeIcon>
-         <customBadgeIcon badge="favorite">./_inc/images/badge-favorite.svg</customBadgeIcon>
-         <customBadgeIcon badge="kidgame">./_inc/images/badge-kidgame.svg</customBadgeIcon>
-         <customBadgeIcon badge="collection">./_inc/images/badge-collection.svg</customBadgeIcon>
-         <customBadgeIcon badge="controller">./_inc/images/badge-controller.svg</customBadgeIcon>
-         <customBadgeIcon badge="altemulator">./_inc/images/badge-altemulator.svg</customBadgeIcon>
-         <customBadgeIcon badge="manual">./_inc/images/badge-manual.svg</customBadgeIcon>
-         <badgeIconColor>818181</badgeIconColor>
-         <controllerSize>0.8</controllerSize>
-         <folderLinkSize>0.8</folderLinkSize>
-      </badges>
-      <image name="system-artwork">
-         <origin>1 0</origin>
-         <pos>1 0</pos>
-         <size>0 1</size>
-         <path>./_inc/systems/artwork/${system.theme}.jpg</path>
-         <default>./_inc/systems/artwork/_default.jpg</default>
-         <interpolation>linear</interpolation>
-         <saturation>0</saturation>
-         <opacity>0.2</opacity>
-         <zIndex>1</zIndex>
-      </image>
-      <video name="game-artwork">
-         <origin>0.5 0.5</origin>
-         <imageType>miximage,screenshot,titlescreen,fanart,cover</imageType>
-         <delay>3</delay>
-      </video>
-      <text name="game-description">
-         <origin>0.5 0</origin>
-         <fontPath>${fontRegular}</fontPath>
-         <fontSize>0.026</fontSize>
-         <lineSpacing>1.18</lineSpacing>
-         <metadata>description</metadata>
-         <color>999999</color>
-         <container>true</container>
-         <containerStartDelay>6</containerStartDelay>
-         <containerScrollSpeed>0.6</containerScrollSpeed>
-      </text>
-      <helpsystem name="help">
-         <origin>0.5 1</origin>
-         <fontPath>${fontLogo}</fontPath>
-         <fontSize>0.024</fontSize>
-         <textColor>555555</textColor>
-         <iconColor>555555</iconColor>
-      </helpsystem>
-   </view>
+    <!-- Background to match system view -->
+    <image name="gamelist-nav-background" path="./system-nav-background.svg" />
+    
+    <!-- Navigation list (matching system-nav) -->
+    <textlist name="gamelist-nav">
+        <pos x="0.1" y="0.2" />
+        <size w="0.8" h="0.6" />
+        <fontSize>0.05</fontSize>
+        <colorNormal>AAAAAA</colorNormal>
+        <colorSelected>FFFFFF</colorSelected>
+        <colorSelectedGradient>CCCCCC</colorSelectedGradient>
+        <scrollSound>scroll.wav</scrollSound>
+    </textlist>
+    
+    <!-- Title to match system-title -->
+    <text name="gamelist-title">
+        <pos x="0.1" y="0.1" />
+        <size w="0.8" h="0.1" />
+        <fontSize>0.07</fontSize>
+        <color>FFFFFF</color>
+    </text>
+    
+    <!-- Game description matching system description -->
+    <text name="game-description">
+        <pos x="0.1" y="0.8" />
+        <size w="0.8" h="0.15" />
+        <fontSize>0.04</fontSize>
+        <color>BBBBBB</color>
+    </text>
+    
+    <!-- Artwork matching system-artwork -->
+    <image name="system-artwork">
+        <pos x="0.75" y="0.2" />
+        <size w="0.2" h="0.2" />
+    </image>
+    
+    <!-- Controller image to match system view -->
+    <image name="system-controller">
+        <pos x="0.75" y="0.5" />
+        <size w="0.2" h="0.2" />
+    </image>
+    
+    <!-- Help system matching system view -->
+    <helpsystem name="help">
+        <pos x="0.05" y="0.95" />
+        <size w="0.9" h="0.05" />
+    </helpsystem>
+</view>
 
    <aspectRatio name="16:9">
       <view name="system">
