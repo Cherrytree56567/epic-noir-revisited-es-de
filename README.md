@@ -10,6 +10,7 @@ This is a port of the Epic Noir theme (originally by [c64-dev & Chicuelo](https:
 - Added a 16:10 Layout Variant
 - Add support for ES-DE capabilities such as badges and aspect ratio switching
 - Embedded the ES-DE [system-metadata](https://gitlab.com/es-de/themes/system-metadata) repository to power system description, release year and hardware type details
+- Changed Gamelist View
 
 ## **Preview**
 
